@@ -142,6 +142,23 @@ main {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
+#circular-cover-bg {
+    background: url("../images/reasons-image.webp") no-repeat center center/cover;
+    margin-bottom: 20px;
+        height: 90vw;
+        width: 90vw;
+        /* Makes square into cicrle */
+        border-radius: 50%;
+        max-width: 300px;
+        max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 
 /* Footer */
 #social-networks {
@@ -156,24 +173,6 @@ main {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
-}
-
-#circle-cover-bg {
-    background: url('../images/reasons-image.webp') no-repeat top center/cover;
-    margin-bottom: 20px;
-    height: 90vw;
-    width: 90vw;
-    /* Makes square into cicrle */
-    border-radius: 50%;
-    max-width: 300px;
-    max-height: 300px;
-}
-
-#benefits-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -217,6 +216,24 @@ main {
         width: 300px;
         right: 50px;
     }
+
+/* Reasons section */
+#benefits-phsysical,
+#benefits-mental {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#benefits-phsysical > div
+#benefits-mental > div {
+    width:75%;
+}
+
+#benefits-mental > div {
+    text-align: end;
+    align-self: flex-end;
+}
+
 }
 
 
@@ -224,5 +241,34 @@ main {
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical>div {
+        align-self: flex-end;
     }
 }
