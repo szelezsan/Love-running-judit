@@ -29,7 +29,7 @@ h3 {
 
 .hidden-heading {
     display: none;
-    
+
 }
 
 /* Header */
@@ -147,15 +147,16 @@ main {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
+
 #circular-cover-bg {
     background: url("../images/reasons-image.webp") no-repeat center center/cover;
     margin-bottom: 20px;
-        height: 90vw;
-        width: 90vw;
-        /* Makes square into cicrle */
-        border-radius: 50%;
-        max-width: 300px;
-        max-height: 300px;
+    height: 90vw;
+    width: 90vw;
+    /* Makes square into cicrle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 #benefits-image {
@@ -163,6 +164,17 @@ main {
     align-items: center;
     justify-content: center;
 
+}
+
+/* Gallery page */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+
+}
+
+#photos {
+    line-height: 0;
 }
 
 /* Footer */
@@ -186,7 +198,9 @@ main {
     background: url(../images/dublin-city.webp) no-repeat center/cover;
     /*Handles responsivity without adding media query */
     display: flex;
-    flex-wrap: wrap;}
+    flex-wrap: wrap;
+}
+
 #times div {
     color: #fafafa;
     background-color: rgb(0, 0, 0, .6);
@@ -198,9 +212,19 @@ main {
     /* Creates a grid of meetup time divs over the background image */
     border: 2px solid white;
 }
+
 #times h3 {
     /* Overrride heading color set in general styles */
     color: #fafafa;
+}
+
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width:576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -245,23 +269,28 @@ main {
         right: 50px;
     }
 
-/* Reasons section */
-#benefits-phsysical,
-#benefits-mental {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-#benefits-phsysical > div
-#benefits-mental > div {
-    width:75%;
-}
+    /* Reasons section */
+    #benefits-phsysical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
-#benefits-mental > div {
-    text-align: end;
-    align-self: flex-end;
-}
+    #benefits-phsysical>div #benefits-mental>div {
+        width: 75%;
+    }
 
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 3;
+
+    }
 }
 
 
@@ -269,6 +298,11 @@ main {
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
     }
 }
 
