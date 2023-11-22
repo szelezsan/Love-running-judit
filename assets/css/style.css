@@ -201,6 +201,24 @@ main {
     }
 }
 
+#circle-cover-bg {
+    background: url('../images/reasons-image.webp') no-repeat top center/cover;
+    margin-bottom: 20px;
+    height: 90vw;
+    width: 90vw;
+    /* Makes square into cicrle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
